@@ -1,0 +1,23 @@
+<mat-card class="w-100">
+  <mat-card-content>
+    <h4 class="mb-56">Edit Form</h4>
+    <form [formGroup]="form" (ngSubmit)="edit()">
+      <mat-form-field class="w-100 fs-16" appearance="outline">
+        <mat-label>Stid</mat-label>
+        <input matInput formControlName="stid" [(ngModel)]="data.stid" />
+        <mat-error *ngIf="handleError('stid', 'required')">
+          This field is required
+        </mat-error>
+      </mat-form-field>
+
+      <mat-form-field class="w-100 fs-16" appearance="outline">
+        <mat-label>Stname</mat-label>
+        <input matInput formControlName="stname" [(ngModel)]="data.stname" />
+        <mat-error *ngIf="handleError('stname', 'required')">
+          This field is required
+        </mat-error>
+      </mat-form-field>
+      <button mat-raised-button color="primary">Edit</button>
+    </form>
+  </mat-card-content>
+</mat-card>
