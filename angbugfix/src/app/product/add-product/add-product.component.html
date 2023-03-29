@@ -1,0 +1,12 @@
+<mat-card class="w-100">
+  <mat-card-content>
+    <h4 class="mb-56">Add Form</h4>
+    <form [formGroup]="form" (ngSubmit)="add()">
+      <mat-form-field class="w-100 fs-16" appearance="outline">
+        <mat-label>Prid</mat-label>
+        <input matInput formControlName="prid" type="number" />
+      </mat-form-field>
+      <button mat-raised-button color="primary">Add</button>
+    </form>
+  </mat-card-content>
+</mat-card>
