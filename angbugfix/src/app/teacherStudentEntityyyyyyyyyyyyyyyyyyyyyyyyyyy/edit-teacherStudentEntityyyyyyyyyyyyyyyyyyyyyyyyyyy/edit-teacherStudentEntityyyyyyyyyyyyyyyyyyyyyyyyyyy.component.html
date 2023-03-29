@@ -1,0 +1,28 @@
+<mat-card class="w-100">
+  <mat-card-content>
+    <h4 class="mb-56">
+      Edit TeacherStudentEntityyyyyyyyyyyyyyyyyyyyyyyyyyy Form
+    </h4>
+    <form [formGroup]="form" (ngSubmit)="edit()">
+      <mat-form-field class="w-100 fs-16" appearance="outline">
+        <mat-label>Tsid</mat-label>
+        <input matInput formControlName="tsid" [(ngModel)]="data.tsid" />
+        <mat-error *ngIf="handleError('tsid', 'required')">
+          This field is required
+        </mat-error>
+      </mat-form-field>
+
+      <mat-form-field class="w-100 fs-16" appearance="outline">
+        <mat-label>Tsname</mat-label>
+        <input matInput formControlName="tsname" [(ngModel)]="data.tsname" />
+        <mat-error *ngIf="handleError('tsname', 'required')">
+          This field is required
+        </mat-error>
+      </mat-form-field>
+      <div class="button-row">
+        <button mat-raised-button color="primary" (click)="back()">Back</button>
+        <button mat-raised-button color="primary">Update</button>
+      </div>
+    </form>
+  </mat-card-content>
+</mat-card>
